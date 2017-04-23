@@ -1,6 +1,4 @@
-# LearnService
-SpringBoot从零学习笔记！
-[参考视频](http://www.imooc.com/learn/767)
+# SpringBoot从零学习笔记！[参考视频](http://www.imooc.com/learn/767)
 
 1. 工程启动
 - 第一种启动方式：ide中启动
@@ -14,12 +12,15 @@ SpringBoot从零学习笔记！
 - @Value
 - @Component
 - @ConfigurationProperties
+
 4. Controller的使用
 
-header 1 | header 2
+注解 | 解释
 ---|---
 @Controller | 处理http请求
 @RestController | Spring4后的新注解，原来返回json需要@ResponseBody配合@Controller
 @RequestMapping | 配置url映射
-
+@PathVariable | 获取url中的数据
+@RequestParam | 获取请求参数的值
+@GetMapping | 组合注解
 
