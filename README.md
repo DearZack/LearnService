@@ -50,5 +50,7 @@ jpa配置
 - @Pointcut
 - @AfterReturning
 3. 统一异常处理
-
+> 无论请求正确错误，返回结果格式一致,例如以下这种格式
+{"code":int,"msg":String,"content":objct}
+- @ExceptionHandler
 4. 单元测试
