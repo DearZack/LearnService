@@ -5,8 +5,10 @@ import io.github.dearzack.repository.GirlRepository;
 import io.github.dearzack.service.GirlService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.List;
 
 /**
@@ -27,11 +29,17 @@ public class GirlController {
      * @return
      */
     @PostMapping(value = "/girls")
-    public Girl addGirl(@RequestParam("cupSize") String cupSize,
-                        @RequestParam("age") Integer age) {
-        Girl girl = new Girl();
-        girl.setCupSize(cupSize);
-        girl.setAge(age);
+    public Girl addGirl(@Valid Girl girl, BindingResult bindingResult
+                        /*@RequestParam("cupSize") String cupSize,
+                        @RequestParam("age") Integer age*/) {
+//        Girl girl = new Girl();
+//        girl.setCupSize(cupSize);
+//        girl.setAge(age);
+
+        if (bindingResult.hasErrors()) {
+            System.out.println(bindingResult.getFieldError().getDefaultMessage());
+            return null;
+        }
 
         return girlRepository.save(girl);
     }

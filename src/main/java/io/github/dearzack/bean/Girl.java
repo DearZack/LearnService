@@ -3,6 +3,7 @@ package io.github.dearzack.bean;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.validation.constraints.Min;
 
 /**
  * Created by Zack on 2017/4/23.
@@ -16,6 +17,7 @@ public class Girl {
 
     private String cupSize;
 
+    @Min(value = 18, message = "没成年少女禁止入内")
     private Integer age;
 
     public Girl() {
