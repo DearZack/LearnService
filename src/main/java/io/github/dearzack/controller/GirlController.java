@@ -24,8 +24,8 @@ public class GirlController {
 
     /**
      * 保存一个女孩
-     * @param cupSize
-     * @param age
+//     * @param cupSize
+//     * @param age
      * @return
      */
     @PostMapping(value = "/girls")

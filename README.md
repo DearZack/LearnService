@@ -1,5 +1,6 @@
-# SpringBoot从零学习笔记！[参考视频](http://www.imooc.com/learn/767)
+# SpringBoot从零学习笔记！
 
+## [入门](http://www.imooc.com/learn/767)
 1. 工程启动
 - 第一种启动方式：ide中启动
 - 第二种启动方式：进入项目根目录，命令行输入 mvn spring-boot:run
@@ -38,12 +39,16 @@ jpa配置
 
 
 ---
-# [进阶](http://www.imooc.com/learn/810)
+
+## [进阶](http://www.imooc.com/learn/810)
 1. 表单验证
 - @Valid对需要验证的字段加上
 - BindingResult 验证结果会放在这个类中
 2. AOP
-
+- @Before
+- @After
+- @Pointcut
+- @AfterReturning
 3. 统一异常处理
 
 4. 单元测试
