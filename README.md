@@ -32,3 +32,6 @@ jpa配置
 - create-drop应用停止时就会删除
 - none什么都不做
 - validate什么都不做，但是会验证bean和原来的表结构是否一致，不一致报错
+
+6.数据库事务
+- @Transactional

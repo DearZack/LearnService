@@ -2,7 +2,9 @@ package io.github.dearzack.controller;
 
 import io.github.dearzack.bean.Girl;
 import io.github.dearzack.repository.GirlRepository;
+import io.github.dearzack.service.GirlService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -14,6 +16,9 @@ import java.util.List;
 public class GirlController {
     @Autowired
     private GirlRepository girlRepository;
+
+    @Autowired
+    private GirlService girlService;
 
     /**
      * 保存一个女孩
@@ -82,6 +87,11 @@ public class GirlController {
     @GetMapping(value = "girls/age/{age}")
     public List<Girl> girlListByAge(@PathVariable("age") Integer age) {
         return girlRepository.findByAge(age);
+    }
+
+    @GetMapping(value = "girls/two")
+    public void girlTwo() {
+        girlService.insectTwoGirl();
     }
 
 }
