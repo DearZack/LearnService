@@ -35,3 +35,15 @@ jpa配置
 
 6.数据库事务
 - @Transactional
+
+
+---
+# [进阶](http://www.imooc.com/learn/810)
+1. 表单验证
+- @Valid对需要验证的字段加上
+- BindingResult 验证结果会放在这个类中
+2. AOP
+
+3. 统一异常处理
+
+4. 单元测试
