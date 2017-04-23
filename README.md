@@ -24,3 +24,11 @@
 @RequestParam | 获取请求参数的值
 @GetMapping | 组合注解
 
+5.数据库操作
+
+jpa配置
+- create每次运行时都会创建一个新的表，如果之前存在这个表会先删除之前的旧表重新创建
+- upadte会保留之前的
+- create-drop应用停止时就会删除
+- none什么都不做
+- validate什么都不做，但是会验证bean和原来的表结构是否一致，不一致报错
