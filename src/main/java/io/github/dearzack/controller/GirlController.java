@@ -1,8 +1,10 @@
 package io.github.dearzack.controller;
 
 import io.github.dearzack.bean.Girl;
+import io.github.dearzack.bean.Result;
 import io.github.dearzack.repository.GirlRepository;
 import io.github.dearzack.service.GirlService;
+import io.github.dearzack.utils.ResultUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.validation.BindingResult;
@@ -100,6 +102,11 @@ public class GirlController {
     @GetMapping(value = "girls/two")
     public void girlTwo() {
         girlService.insectTwoGirl();
+    }
+
+    @GetMapping(value = "girls/find/{id}")
+    public Result findGirl(@PathVariable("id") Integer id) throws Exception{
+        return ResultUtils.success(girlService.findGirl(id));
     }
 
 }
