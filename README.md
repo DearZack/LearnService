@@ -1,6 +1,7 @@
 # SpringBoot从零学习笔记！
 
 ## [入门](http://www.imooc.com/learn/767)
+### [视频源码](http://git.oschina.net/liaoshixiong/girl)
 1. 工程启动
 - 第一种启动方式：ide中启动
 - 第二种启动方式：进入项目根目录，命令行输入 mvn spring-boot:run
@@ -54,3 +55,11 @@ jpa配置
 {"code":int,"msg":String,"content":objct}
 - @ExceptionHandler
 4. 单元测试
+- @RunWith(SpringRunner.class)
+- @SpringBootTest
+- @Test
+- 或者在想要测试的类中右键-->Go To -->Test -->勾选上想要测试的方法
+- @AutoConfigureMockMvc
+- 项目打包的时候会将所有的测试用例跑一遍，并输出结果。
+- 打包指令mvn clean package
+- 打包时跳过测试 mvn clean package -Dmaven.test.skip=ture

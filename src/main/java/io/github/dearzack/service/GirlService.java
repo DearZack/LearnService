@@ -45,4 +45,8 @@ public class GirlService {
         }
         return girl;
     }
+
+    public Girl findOne(Integer id) {
+        return girlRepository.findOne(id);
+    }
 }
